@@ -1,0 +1,10 @@
+<h1>{% if object %}Atualizar{% else %}Criar{% endif %} Tarefa</h1>
+
+<form method="POST">
+    {% csrf_token %}
+     {{ form }}
+     <a href="{% url 'todo_create' %}"><button type="submit">Salvar</button></a>
+</form>
+    
+<a href="{% url 'todo_list' %}">Cancelar</a>
+    
